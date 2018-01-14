@@ -1,7 +1,4 @@
 $(function() {
-
-  // your code will go here
-
   $.ajax({
     url: 'https://www.codeschool.com/users/lucasbritz.json',
     dataType: 'jsonp',
@@ -10,6 +7,8 @@ $(function() {
         $('#badges').html('<div class="course">' + course + '</div>');
         $('.course').html('<h3>' + course.title + '</h3>');
         $('.course').html('<img src="' + course.badge + '" />');
+        $('.course').html('<a href="' + course.url
+          + '" target="_blank" class="btn btn-primary">See Course</a>');
       });
     }
   });
